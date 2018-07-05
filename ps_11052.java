@@ -13,8 +13,10 @@ public class ps_11052 {
 			P[i] = Integer.parseInt(token[i-1]);
 		}
 		int[] d = new int[N+1];
-		
+		// i 붕어빵 개수
+		// j 팔거 
 		for (int i = 1; i <= N; i++) {
+			// max 
 			for (int j = 1; j <= i; j++) {
 				if (d[i] < P[j] + d[i-j])
 					d[i] = P[j] + d[i-j];
